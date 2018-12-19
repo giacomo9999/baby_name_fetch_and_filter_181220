@@ -3,7 +3,8 @@ import "./Contact.css";
 import PropTypes from "prop-types";
 
 function Contact(props) {
-  let strOut=props.name+" "+props.race;
+  console.log("Now I'm in Contact");
+  let strOut=props.name+" "+props.race+" "+props.year;
   return (
     <div className="contact">
       <span>{strOut}</span>

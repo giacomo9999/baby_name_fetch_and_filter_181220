@@ -14,6 +14,7 @@ class App extends Component {
       )
       // extract relevant data from response object
       .then(response => {
+        console.log('Assembling database...')
         const recordObj = response.data.data.map((entry, index) => ({
           key: "entry_" + index,
           birthYear: entry[8],
@@ -23,11 +24,11 @@ class App extends Component {
           withThatName: entry[12],
           nameRank: entry[13]
         }));
-        // create a new state object withut mutating the original one
+        // create a new state object without mutating the original one
         const newData = Object.assign({}, this.state, { namesData: recordObj });
         // store the new object in the component's state
         this.setState(newData);
-        console.log(this.state.namesData[0]);
+        console.log('Database assembled.');
       })
       .catch(error => console.log(error));
   }
