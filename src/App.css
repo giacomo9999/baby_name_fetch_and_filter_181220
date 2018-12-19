@@ -1,5 +1,9 @@
 header {
   font-weight: 300;
-  font-style: italic;
+  /* font-style: italic; */
   text-align: center;
+}
+
+h1 {
+  font-weight: 400;
 }
