@@ -20,8 +20,15 @@ class App extends Component {
         "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
       )
       .then(response => {
-        const testResp = response.data.data[0][8];
-        console.log("Test response: " + testResp);
+        const recordObj = {
+          year: response.data.data[0][8],
+          sex: response.data.data[0][9],
+          race: response.data.data[0][10],
+          name: response.data.data[0][11],
+          numWithSameName: response.data.data[0][12],
+          rank: response.data.data[0][13],
+        };
+        console.log("Test response: ",recordObj.year, recordObj.sex, recordObj.name);
       })
       .catch(error => console.log(error));
 
