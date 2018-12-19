@@ -1,16 +1,16 @@
 .contact {
-  width: 200px;
+  width: 300px;
   background: rgb(190, 187, 204);
   margin: 0 auto;
   color: white;
-  padding: 15px;
-  margin: 5px auto;
+  padding: 8px;
+  margin: 3px auto;
 }
 
 .contact span {
   font-weight: 400;
   font-style: italic;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   text-decoration: none;
   color: black;
 }
