@@ -20,15 +20,21 @@ class App extends Component {
         "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
       )
       .then(response => {
-        const recordObj = {
-          year: response.data.data[0][8],
-          sex: response.data.data[0][9],
-          race: response.data.data[0][10],
-          name: response.data.data[0][11],
-          numWithSameName: response.data.data[0][12],
-          rank: response.data.data[0][13],
-        };
-        console.log("Test response: ",recordObj.year, recordObj.sex, recordObj.name);
+        const recordObj = response.data.data.map(entry => ({
+          birthYear: entry[8],
+          sex: entry[9],
+          race: entry[10],
+          name: entry[11],
+          withThatName: entry[12],
+          nameRank: entry[13]
+        }));
+        console.log(
+          "Test response: ",
+          recordObj[0].birthYear,
+          recordObj[0].sex,
+          recordObj[0].race,
+          recordObj[0].name
+        );
       })
       .catch(error => console.log(error));
 
