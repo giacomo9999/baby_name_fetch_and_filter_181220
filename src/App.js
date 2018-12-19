@@ -16,23 +16,34 @@ class App extends Component {
 
   componentDidMount() {
     axios
-      .get("https://jsonplaceholder.typicode.com/users")
+      .get(
+        "https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD"
+      )
       .then(response => {
-        // create array of contacts with only the relevant info
-        const newContacts = response.data.map(c => {
-          return {
-            id: c.id,
-            name: c.name
-          };
-        });
-        // create a new state object withut mutating the original one
-        const newState = Object.assign({}, this.state, {
-          contacts: newContacts
-        });
-        // store the new object in the component's state
-        this.setState(newState);
+        const testResp = response.data.data[0][8];
+        console.log("Test response: " + testResp);
       })
       .catch(error => console.log(error));
+
+    // axios
+    //   .get("https://data.cityofnewyork.us/api/views/25th-nujf/rows.json?accessType=DOWNLOAD")
+    //   .then(response => {
+    //     console.log(response.data.data);
+    //     // create array of contacts with only the relevant info
+    //     const newContacts = response.data.map(c => {
+    //       return {
+    //         id: c.id,
+    //         name: c.name
+    //       };
+    //     });
+    //     // create a new state object withut mutating the original one
+    //     const newState = Object.assign({}, this.state, {
+    //       contacts: newContacts
+    //     });
+    //     // store the new object in the component's state
+    //     this.setState(newState);
+    //   })
+    //   .catch(error => console.log(error));
   }
 
   render() {
