@@ -3,9 +3,10 @@ import "./Contact.css";
 import PropTypes from "prop-types";
 
 function Contact(props) {
+  let strOut=props.name+" "+props.race;
   return (
     <div className="contact">
-      <span>{props.name}</span>
+      <span>{strOut}</span>
     </div>
   );
 }
