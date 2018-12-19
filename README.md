@@ -2,4 +2,4 @@ Based on tutorial at: https://www.andreasreiterer.at/creating-react-app-create-r
 
 19 Dec 2018: Forked to be modified for nyc.gov database
 
-Test tweak: does this revert work?
+19 Dec 2018: New branch using database
