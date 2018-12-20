@@ -1,4 +1,4 @@
-.contact {
+.list {
   width: 300px;
   background: rgb(190, 187, 204);
   margin: 0 auto;
@@ -7,7 +7,7 @@
   margin: 3px auto;
 }
 
-.contact span {
+.list span {
   font-weight: 400;
   font-style: italic;
   /* font-size: 1.2em; */
