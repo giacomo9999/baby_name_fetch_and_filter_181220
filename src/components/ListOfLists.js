@@ -7,21 +7,42 @@ class ListOfLists extends React.Component {
       {
         list_id: "1",
         birthYear: "2011",
-        sex: "Female",
-        race: "Asian/Pacific"
+        sex: "FEMALE",
+        race: "ASIAN AND PACIFIC ISLANDER"
       },
       {
         list_id: "2",
         birthYear: "2015",
-        sex: "Male",
-        race: "Hispanic"
+        sex: "MALE",
+        race: "HISPANIC"
       }
     ]
   };
 
   getTopNames = entry => {
-    console.log("Names data: ", this.props.namesData[0]);
-    return entry.race + " blorg";
+    if (this.props.namesData.length===0){
+      console.log('data is not in yet.');
+      return [];
+    }
+    
+    // console.log(filteredNamesData[0].name);
+    const filteredNamesData = this.props.namesData.filter(
+      record =>
+        record.birthYear === entry.birthYear &&
+        record.sex === entry.sex &&
+        record.race === entry.race
+    );
+    console.log('filtered database entry: ',filteredNamesData[0]);
+
+    const topFive = [];
+    // for (let i = 0; i <= 4; i++) {
+    //   // console.log(i, filteredNamesData[i].name);
+    //   if (typeof filteredNamesData[i].name !== 'undefined') {
+    //     topFive.push(filteredNamesData[i].name);
+    //   }
+    // }
+    console.log(topFive);
+    return topFive;
   };
 
   displayListParams = () => {
