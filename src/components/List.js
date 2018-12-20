@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function List(props) {
   console.log("Now I'm in List");
   // let strOut=props.name+" "+props.race+" "+props.year;
-  let strOut="list goes here";
+  let strOut=props.race;
   return (
     <div className="list">
       <span>{strOut}</span>
