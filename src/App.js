@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import axios from "axios";
 
 import ListOfLists from "./components/ListOfLists";
@@ -20,6 +19,7 @@ class App extends Component {
           birthYear: entry[8],
           sex: entry[9],
           race: entry[10],
+          // some WHITE NON HISPANIC entries are listed as WHITE NON HISP - this needs a fix.
           name: entry[11],
           withThatName: entry[12],
           nameRank: entry[13]

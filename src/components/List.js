@@ -1,5 +1,4 @@
 import React from "react";
-import "./Contact.css";
 import PropTypes from "prop-types";
 
 function List(props) {
@@ -7,7 +6,8 @@ function List(props) {
   let strOut=props.sex+" • "+props.race+" • "+props.birthYear;
   return (
     <div className="list">
-      <span>{strOut}</span>
+      <h4>{strOut}</h4>
+      <h3>{props.topFiveNames[0]}</h3>
     </div>
   );
 }

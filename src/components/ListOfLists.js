@@ -12,37 +12,43 @@ class ListOfLists extends React.Component {
       },
       {
         list_id: "2",
-        birthYear: "2015",
+        birthYear: "2012",
         sex: "MALE",
         race: "HISPANIC"
-      }
+      },
+      {
+        list_id: "3",
+        birthYear: "2014",
+        sex: "MALE",
+        race: "HISPANIC"
+      },
+      {
+        list_id: "4",
+        birthYear: "2013",
+        sex: "FEMALE",
+        race: "WHITE NON HISPANIC"
+      },
     ]
   };
 
   getTopNames = entry => {
-    if (this.props.namesData.length===0){
-      console.log('data is not in yet.');
+    if (this.props.namesData.length === 0) {
+      console.log("data is not in yet.");
       return [];
+    } else {
+      const filteredNamesData = this.props.namesData.filter(
+        record =>
+          record.birthYear === entry.birthYear &&
+          record.sex === entry.sex &&
+          record.race === entry.race
+      );
+      const topFive = [];
+      for (let i = 0; i <= 4; i++) {
+        topFive.push(filteredNamesData[i].name.toUpperCase());
+      }
+      console.log(topFive);
+      return topFive;
     }
-    
-    // console.log(filteredNamesData[0].name);
-    const filteredNamesData = this.props.namesData.filter(
-      record =>
-        record.birthYear === entry.birthYear &&
-        record.sex === entry.sex &&
-        record.race === entry.race
-    );
-    console.log('filtered database entry: ',filteredNamesData[0]);
-
-    const topFive = [];
-    // for (let i = 0; i <= 4; i++) {
-    //   // console.log(i, filteredNamesData[i].name);
-    //   if (typeof filteredNamesData[i].name !== 'undefined') {
-    //     topFive.push(filteredNamesData[i].name);
-    //   }
-    // }
-    console.log(topFive);
-    return topFive;
   };
 
   displayListParams = () => {
@@ -61,12 +67,7 @@ class ListOfLists extends React.Component {
   render() {
     const lists = this.displayListParams();
     console.log("Lists: ", lists);
-    return (
-      <div>
-        <h2>-List Of The Lists-</h2>
-        {lists}
-      </div>
-    );
+    return <div>{lists}</div>;
   }
 }
 
