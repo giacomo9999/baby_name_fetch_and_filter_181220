@@ -19,6 +19,11 @@ class ListOfLists extends React.Component {
     ]
   };
 
+  getTopNames = entry => {
+    console.log("Names data: ", this.props.namesData[0]);
+    return entry.race + " blorg";
+  };
+
   displayListParams = () => {
     const lists = this.state.lists.map((list, index) => (
       <List
@@ -26,6 +31,7 @@ class ListOfLists extends React.Component {
         race={this.state.lists[index].race}
         sex={this.state.lists[index].sex}
         birthYear={this.state.lists[index].birthYear}
+        topFiveNames={this.getTopNames(list)}
       />
     ));
     return lists;
