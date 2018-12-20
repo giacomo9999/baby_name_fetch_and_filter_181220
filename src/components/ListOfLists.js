@@ -19,12 +19,25 @@ class ListOfLists extends React.Component {
     ]
   };
 
+  displayListParams = () => {
+    const lists = this.state.lists.map((list, index) => (
+      <List
+        key={"list_" + index}
+        race={this.state.lists[index].race}
+        sex={this.state.lists[index].sex}
+        birthYear={this.state.lists[index].birthYear}
+      />
+    ));
+    return lists;
+  };
+
   render() {
-    console.log("Lists: ", this.state.lists);
+    const lists = this.displayListParams();
+    console.log("Lists: ", lists);
     return (
       <div>
         <h2>-List Of The Lists-</h2>
-        <List race={this.state.lists[0].race} />
+        {lists}
       </div>
     );
   }
