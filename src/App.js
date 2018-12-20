@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import axios from "axios";
 
-import ContactList from "./components/ContactList";
+import ListOfLists from "./components/ListOfLists";
 
 class App extends Component {
   state = { namesData: [] };
@@ -37,9 +37,9 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Welcome To Contact Manager</h1>
+          <h1>Welcome To Baby Names</h1>
         </header>
-        <ContactList contacts={this.state.namesData} />
+        <ListOfLists contacts={this.state.namesData} />
       </div>
     );
   }

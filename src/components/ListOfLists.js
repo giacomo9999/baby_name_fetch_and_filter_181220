@@ -1,10 +1,11 @@
 import React from "react";
 import Contact from "./Contact";
 
-function ContactList(props) {
+function ListOfLists(props) {
   console.log("Now I'm in ContactList");
   return (
     <div>
+      <h2>-List Of Lists-</h2>
       {/* {props.contacts.map(c => (
         <Contact key={c.key} race={c.race} name={c.name} year={c.birthYear} />
       ))} */}
@@ -12,4 +13,4 @@ function ContactList(props) {
   );
 }
 
-export default ContactList;
+export default ListOfLists;
