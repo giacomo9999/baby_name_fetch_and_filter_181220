@@ -39,7 +39,7 @@ class App extends Component {
         <header className="App-header">
           <h1>Welcome To Baby Names</h1>
         </header>
-        <ListOfLists contacts={this.state.namesData} />
+        <ListOfLists namesData={this.state.namesData} />
       </div>
     );
   }
