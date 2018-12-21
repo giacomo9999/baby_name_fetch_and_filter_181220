@@ -6,4 +6,4 @@ Based on tutorial at: https://www.andreasreiterer.at/creating-react-app-create-r
 
 20 Dec 2018: Working on code to filter database by each list's selection parameters.
 
-21 Dec 2018: Filter working. Writing workaround for database issue (some "WHITE NON HISPANIC" entries are listed as "WHITE NON HISP".)
+21 Dec 2018: Filter working. Fixed database issue (some "WHITE NON HISPANIC" entries are listed as "WHITE NON HISP"--used forEach to fix each entry immediately after import.) 
