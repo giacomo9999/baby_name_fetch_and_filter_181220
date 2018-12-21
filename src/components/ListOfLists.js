@@ -24,8 +24,8 @@ class ListOfLists extends React.Component {
       },
       {
         list_id: "4",
-        birthYear: "2016",
-        sex: "FEMALE",
+        birthYear: "2013",
+        sex: "MALE",
         race: "WHITE NON HISPANIC"
       },
     ]
@@ -36,12 +36,17 @@ class ListOfLists extends React.Component {
       console.log("data is not in yet.");
       return [];
     } else {
+      // return only records from DB that match year/sex/race arguments
       const filteredNamesData = this.props.namesData.filter(
         record =>
           record.birthYear === entry.birthYear &&
           record.sex === entry.sex &&
           record.race === entry.race
       );
+      if (filteredNamesData.length ===0){
+        console.log('cannot match request parameters to DB.');
+        return ["one or more arguments not in DB"];
+      }
       const topFive = [];
       for (let i = 0; i <= 4; i++) {
         topFive.push(filteredNamesData[i].name.toUpperCase());

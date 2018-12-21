@@ -19,7 +19,6 @@ class App extends Component {
           birthYear: entry[8],
           sex: entry[9],
           race: entry[10],
-          // some WHITE NON HISPANIC entries are listed as WHITE NON HISP - this needs a fix.
           name: entry[11],
           withThatName: entry[12],
           nameRank: entry[13]
@@ -42,7 +41,8 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Welcome To Baby Names</h1>
+          <h1>NYC Baby Names</h1>
+          <h4>Source: https://opendata.cityofnewyork.us/</h4>
         </header>
         <ListOfLists namesData={this.state.namesData} />
       </div>

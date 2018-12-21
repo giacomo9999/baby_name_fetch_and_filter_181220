@@ -27,3 +27,9 @@ h4 {
   line-height: 80%;
 }
 
+li {
+  font-weight: 400;
+  font-size: 120%;
+  text-align: left;
+}
+
