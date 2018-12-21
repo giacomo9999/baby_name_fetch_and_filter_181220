@@ -18,16 +18,10 @@ class ListOfLists extends React.Component {
       },
       {
         list_id: "3",
-        birthYear: "2014",
+        birthYear: "2011",
         sex: "MALE",
-        race: "HISPANIC"
-      },
-      {
-        list_id: "4",
-        birthYear: "2013",
-        sex: "MALE",
-        race: "WHITE NON HISPANIC"
-      },
+        race: "BLACK NON HISPANIC"
+      }
     ]
   };
 
@@ -43,8 +37,8 @@ class ListOfLists extends React.Component {
           record.sex === entry.sex &&
           record.race === entry.race
       );
-      if (filteredNamesData.length ===0){
-        console.log('cannot match request parameters to DB.');
+      if (filteredNamesData.length === 0) {
+        console.log("cannot match request parameters to DB.");
         return ["one or more arguments not in DB"];
       }
       const topFive = [];
