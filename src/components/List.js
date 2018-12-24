@@ -6,10 +6,10 @@ function List(props) {
   const strOut = props.sex + " • " + props.race + " • " + props.birthYear;
 
   const itemStyle = {
-    listStyleType: 'none'
+    listStyleType: "none"
   };
-  const nameList = props.topFiveNames.map((name,index) => (
-    <li style={itemStyle}>{index+1+".  "+name}</li>
+  const nameList = props.topFiveNames.map((name, index) => (
+    <li style={itemStyle}>{index + 1 + ".  " + name}</li>
   ));
   return (
     <div className="list">

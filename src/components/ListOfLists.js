@@ -6,22 +6,28 @@ class ListOfLists extends React.Component {
     lists: [
       {
         list_id: "1",
-        birthYear: "2011",
+        birthYear: "2012",
         sex: "FEMALE",
         race: "ASIAN AND PACIFIC ISLANDER"
       },
       {
         list_id: "2",
-        birthYear: "2012",
-        sex: "MALE",
+        birthYear: "2011",
+        sex: "FEMALE",
         race: "HISPANIC"
       },
-      {
-        list_id: "3",
-        birthYear: "2011",
-        sex: "MALE",
-        race: "BLACK NON HISPANIC"
-      }
+      // {
+      //   list_id: "3",
+      //   birthYear: "2013",
+      //   sex: "FEMALE",
+      //   race: "BLACK NON HISPANIC"
+      // },
+      // {
+      //   list_id: "4",
+      //   birthYear: "2011",
+      //   sex: "FEMALE",
+      //   race: "WHITE NON HISPANIC"
+      // },
     ]
   };
 
